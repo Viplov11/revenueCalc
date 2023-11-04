@@ -1,61 +1,83 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .calculator {
+}
+
+.calculator {
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  .input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.header p {
+    font-size: 14px;
+    color: #777;
+}
+
+.input-section {
     margin: 10px 0;
-    text-align: left;
-  }
-  
-  input, select {
-    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+    width: calc(100% - 20px);
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 5px;
-  }
-  
-  input[type="button"] {
-    padding: 10px 20px;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
     background-color: #4285F4;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  input[type="button"]:hover {
+}
+
+button:hover {
     background-color: #357AE8;
-  }
-  
-  .result {
+}
+
+.result {
     margin-top: 20px;
     font-weight: bold;
-  }
-  
-  .adcontainer {
-    border: 1px dashed #ddd;
+}
+
+.adcontainer {
+    border: 1px solid #ddd;
     padding: 10px;
     margin-top: 15px;
-  }
-  
+}
+
+.ad-banner {
+    margin-top: 30px;
+}
