@@ -2,30 +2,31 @@ document.getElementById('calculate-revenue-button').addEventListener('click', ca
 
 function calculateRevenue() {
   const adType = document.getElementById('adType').value;
-  const adRevenue = parseFloat(document.getElementById('adRevenue').value);
-  const views = parseInt(document.getElementById('views').value);
+  const impressions = parseInt(document.getElementById('impressions').value);
+  const clicks = parseInt(document.getElementById('clicks').value);
 
-  if (isNaN(adRevenue) || isNaN(views)) {
-    document.getElementById('result').innerHTML = 'Please enter valid numbers.';
+  if (isNaN(impressions) || isNaN(clicks)) {
+    document.getElementById('result').innerHTML = 'Please enter valid numbers for Impressions and Clicks.';
     return;
   }
 
   let totalRevenue = 0;
 
   if (adType === 'adsense') {
-    // Google AdSense revenue calculation based on the provided parameters
-    // Simplified formula: AdSense revenue = Impressions x CPM + Clicks x CPC
-    const impressions = views;
-    const cpm = adRevenue / impressions;
-    const clicks = (impressions / 1000) * (2 + Math.random() * 3); // Randomizing clicks for demonstration purposes
-    const cpc = adRevenue / clicks;
+    const cpm = 5; // Example CPM for demonstration
+    const cpc = 0.5; // Example CPC for demonstration
 
-    totalRevenue = (impressions * cpm) + (clicks * cpc);
+    totalRevenue = (impressions * (cpm / 1000)) + (clicks * cpc);
   } else if (adType === 'amazon') {
-    // Amazon Affiliate revenue calculation based on the provided parameters (not explicitly given)
-    // Here, an example formula or logic could be applied to simulate Amazon revenue calculation
-    totalRevenue = adRevenue * (views / 1000);
+    // Perform Amazon Affiliate calculations based on provided fields
+    // Update logic based on how the Amazon Affiliate revenue is calculated
+    // Example calculation:
+    const conversionRate = (clicks / impressions) * 100; // Conversion rate in percentage
+    const averageSaleAmount = 50;
+    const commissionRate = 0.1;
+
+    totalRevenue = (conversionRate * averageSaleAmount * commissionRate) / 100;
   }
 
-  document.getElementById('result').innerHTML = `Estimated Ad Revenue: $${totalRevenue.toFixed(2)}`;
+  document.getElementById('result').innerHTML = `Estimated Revenue: $${totalRevenue.toFixed(2)}`;
 }

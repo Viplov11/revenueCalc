@@ -2,7 +2,14 @@
 <html lang="en">
 
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1712982817970790" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1234567890", // Replace with your AdSense client ID
+      enable_page_level_ads: true
+    });
+  </script>
+   <script async src="script.js"></script>
   <title>Revenue Calculator - Estimate Your Ad Earnings</title>
   <meta charset="UTF-8">
   <meta name="description" content="Estimate your earnings from advertisements or affiliations using our Revenue Calculator. Calculate revenue from Google AdSense or Amazon Affiliate based on ad revenue and views.">
@@ -16,7 +23,7 @@
   <div class="calculator">
     <div class="header">
       <h1>Revenue Calculator - Estimate Your Ad Earnings</h1>
-      <p>Estimate your earnings from ads or affiliates. Use our Revenue Calculator to calculate potential revenue from Google AdSense or Amazon Affiliate based on ad revenue and views.</p>
+      <p>Estimate your earnings from ads or affiliates. Use our Revenue Calculator to simulate potential revenue scenarios from Google AdSense or Amazon Affiliate based on ad parameters.</p>
     </div>
 
     <div class="input-section">
@@ -28,17 +35,13 @@
     </div>
 
     <div class="input-section">
-      <label for="adRevenue">Ad Revenue (in USD):</label>
-      <input type="number" id="adRevenue" required>
+      <label for="impressions">Impressions:</label>
+      <input type="number" id="impressions" required>
     </div>
 
     <div class="input-section">
-      <label for="views">Estimated Views:</label>
-      <input type="number" id="views" required>
-    </div>
-
-    <div class="adcontainer" id="ad-container">
-      <!-- Google AdSense ad will appear here -->
+      <label for="clicks">Clicks:</label>
+      <input type="number" id="clicks" required>
     </div>
  
     <div class="calculate-button">
@@ -46,16 +49,15 @@
     </div>
 
     <div class="result" id="result">
-      <!-- Result will be displayed here -->
+      <!-- Results will be displayed here -->
     </div>
 
-    <ins class="adsbygoogle ad-banner"
-      style="display:block"
-      data-ad-client="ca-pub-1712982817970790"
-      data-ad-slot="3780687706"
-      data-ad-format="auto"
-      data-full-width-responsive="true">
-    </ins>
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-1712982817970790"
+    data-ad-slot="3780687706"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
