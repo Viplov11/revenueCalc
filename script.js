@@ -1,4 +1,3 @@
-// Calculate revenue when the user clicks the "Calculate" button
 document.getElementById('calculate-revenue-button').addEventListener('click', calculateRevenue);
 
 function calculateRevenue() {
@@ -14,15 +13,19 @@ function calculateRevenue() {
   let totalRevenue = 0;
 
   if (adType === 'adsense') {
-    const clicks = (views / 100) * 3;
-    const revenuePerClick = 0.2;
-    totalRevenue = clicks * revenuePerClick;
+    // Google AdSense revenue calculation based on the provided parameters
+    // Simplified formula: AdSense revenue = Impressions x CPM + Clicks x CPC
+    const impressions = views;
+    const cpm = adRevenue / impressions;
+    const clicks = (impressions / 1000) * (2 + Math.random() * 3); // Randomizing clicks for demonstration purposes
+    const cpc = adRevenue / clicks;
+
+    totalRevenue = (impressions * cpm) + (clicks * cpc);
   } else if (adType === 'amazon') {
-    const conversionRate = (views / 100) * 5;
-    const averageSaleAmount = 50;
-    const commissionRate = 0.1;
-    totalRevenue = conversionRate * averageSaleAmount * commissionRate;
+    // Amazon Affiliate revenue calculation based on the provided parameters (not explicitly given)
+    // Here, an example formula or logic could be applied to simulate Amazon revenue calculation
+    totalRevenue = adRevenue * (views / 1000);
   }
 
-  document.getElementById('result').innerHTML = `Estimated Revenue: $${totalRevenue.toFixed(2)}`;
+  document.getElementById('result').innerHTML = `Estimated Ad Revenue: $${totalRevenue.toFixed(2)}`;
 }
