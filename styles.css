@@ -78,9 +78,9 @@
         color: #34B7F1;
     }
     
-    .adcontainer {
-        border: 1px solid #ddd;
-        padding: 10px;
+    .ad-container {
+        display: flex;
+        justify-content: flex-end;
         margin-top: 15px;
     }
     
@@ -96,3 +96,8 @@
         }
     }
     
+    .ad-container ins.adsbygoogle {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
